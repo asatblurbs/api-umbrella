@@ -3,6 +3,7 @@ FROM debian:stretch
 ENV API_UMBRELLA_VERSION 0.15.1-1~stretch
 
 USER 0
+RUN apt-get update && apt-get install -y gnupg2
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 367404D553B42995
 
 # Install API Umbrella
